@@ -1,0 +1,10 @@
+{% if page.sidebar %}
+  <div class="sidebar sticky">
+    {%- assign author = page.author | default: page.authors[0] | default: site.author -%}
+    {%- assign author = site.data.authors[author] | default: author -%}
+    
+    {%- if author.twitter -%}
+      <h3>site.data.ui-text[site.locale].latest_tweets</h3>
+    {%- endif -%}
+  </div>
+{% endif %}
