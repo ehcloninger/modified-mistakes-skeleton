@@ -20,7 +20,7 @@
     {%- assign author = site.data.authors[author] | default: author -%}  
     {%- if author.twitter -%}
     <div class="">
-      <h3>{{ site.data.ui-text[site.locale].latest_tweets }}</h3>
+      <h3>{{ site.data.ui-text[site.locale].latest_tweets | default: "Latest Tweets"  }}</h3>
     </div>
     {%- endif -%}
   </div>
